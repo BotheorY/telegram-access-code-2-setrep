@@ -5,6 +5,9 @@ from telethon.sessions import StringSession
 from telethon import events
 from constants import *
 import os
+import warnings
+
+warnings.simplefilter("ignore")
 
 try:
     client = TelegramClient(StringSession(core.get_string_session()), os.environ.get('BT_TELEGRAM_API_ID').strip(), os.environ.get('BT_TELEGRAM_API_HASH').strip())
